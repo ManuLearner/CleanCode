@@ -26,6 +26,7 @@ public class TestingTool {
 				try {
 					TestingTool window = new TestingTool();
 					window.frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -70,11 +71,12 @@ public class TestingTool {
 						//UserName=txtUserName.getText();
 						//Password=passwordField.getText();
 						BrowserOpen.launchApp(URL);
+						//JOptionPane.showMessageDialog(null,"Tool work successfully");
 						
 					}catch(Exception e)
 					{
-						
-						JOptionPane.showMessageDialog(null,e);
+						System.out.print(e);
+						//JOptionPane.showMessageDialog(null,e);
 					
 					}
 			}

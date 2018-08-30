@@ -95,7 +95,7 @@ public static void launchApp(String baseUrl )throws InterruptedException, IOExce
 		
 		
 			String OutputData = WhichFunctionToUse(type, xPath);
-			System.out.println(OutputData);
+			
 			
 			try {
 				System.out.println(OutputData);
@@ -278,22 +278,6 @@ public static void launchApp(String baseUrl )throws InterruptedException, IOExce
 		return driver;
 	}
 
-	/* public static void WaitOnCSVFile(WebDriver driver) throws InterruptedException {
-		DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmm");
-		Date date = new Date();
-
-		String Xpath= "//span[contains(text(), '"+dateFormat.format(date)+"')]";
-		
-		List<WebElement> elems = driver.findElements(By.xpath(Xpath));
-		while (elems.size() == 0) {
-			TimeUnit.SECONDS.sleep(10);
-			GoToPath(driver,"//input[@name='btnRefresh']");
-			elems = driver.findElements(By.xpath(Xpath));
-		}
-		driver.findElement(By.xpath(Xpath)).click();
-	 } */
-	 
-	 
 	 public static void waitforlogin(WebDriver driver, String baseUrl) {
 		    WebDriverWait wait = new WebDriverWait(driver, 1000);
 		    String url =  driver.getCurrentUrl();
